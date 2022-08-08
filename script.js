@@ -1,6 +1,7 @@
 let menu = document.getElementById('checkbox');
 let nav = document.getElementById('nav');
 let refs = document.getElementById('refs');
+let checkbox = document.getElementById('checkbox');
 
 let num = 1;
 
@@ -24,15 +25,18 @@ menu.addEventListener('click', () => {
 });
 
 function updateNavBar ()  {
+
+    viewportWidth = window.innerWidth;
+
     if (viewportWidth > 700) {
+        checkbox.checked === true;
         nav.classList.remove('open');
         refs.style.display = 'flex';
         console.log('bigger');
         return;
-    } else if (viewportWidth <= 700) {
-        nav.classList.remove('open');
-        refs.style.display = 'none';
-        console.log('lower');
     }
+    nav.classList.remove('open');
+    refs.style.display = 'none';
+    console.log('lower');
 };
 
