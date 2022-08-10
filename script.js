@@ -16,6 +16,7 @@ menu.addEventListener('click', () => {
         refs.style.display = 'none';
         num++;
         nav.classList.toggle('open');
+        console.log(num);
         return;
     }
     nav.classList.toggle('open');
@@ -29,14 +30,19 @@ function updateNavBar ()  {
     viewportWidth = window.innerWidth;
 
     if (viewportWidth > 700) {
-        checkbox.checked === true;
         nav.classList.remove('open');
+        console.log('VW > 700',num);
         refs.style.display = 'flex';
-        console.log('bigger');
+        // console.log('more than 700px', 'checkbox:', checkbox.checked);
+        checkbox.checked = false;
         return;
     }
-    nav.classList.remove('open');
-    refs.style.display = 'none';
-    console.log('lower');
+    if (!checkbox.checked) {
+        nav.classList.remove('open');
+        // checkbox.checked = false;
+        refs.style.display = 'none';
+        console.log('VW < 700',num);
+    }
+    // console.log('less than 700px', 'checkbox:' , checkbox.checked);
 };
 
