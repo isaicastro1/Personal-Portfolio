@@ -12,12 +12,13 @@ window.addEventListener('resize', updateNavBar);
 menu.addEventListener('click', () => {
 
     wrapper.classList.toggle('open-nav');
+    wrapper.style.zIndex = -10;
 
     wrapper.ontransitionend = () => {
         wrapper.style.zIndex = 2;
-        console.log('Transition has ended');
+        // console.log('Transition has ended');
     }
-    wrapper.style.zIndex = 0;
+    wrapper.style.zIndex = -10;
 
     }
 );
