@@ -32,6 +32,7 @@ body {
     margin: 0;
     background-color: #393939;
     z-index: 2;
+    position: fixed;
 }
 
 label {
@@ -261,7 +262,104 @@ li:hover {
 
 /* Body */
 
-.body {
-    width: 100vw;
+.first-page {
+    display: grid;
+    place-content: center;
+    align-items: center;
     height: 100vh;
+    /* min-height: 800px; */
+    font-family: 'Source Code Pro', monospace;
+}
+
+.my-name,
+.subtitle {
+    font-size: 2.5rem;
+    margin: 10px;
+    position: relative;
+}
+
+
+.my-name {
+    width: max-content;
+}
+
+.name::before,
+.name::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sub::before,
+.sub::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.name::before {
+    background: white;
+    animation: typewriter 4s steps(23) 1s forwards;
+}
+
+.name::after {
+    width: 0.125em;
+    background: black;
+    animation: 
+    typewriter 4s steps(23) 1s forwards,
+    blinking 650ms steps(2, start) infinite;
+}
+
+.sub::before {
+    background: white;
+    animation-delay: 4.5s;
+    animation: typewriter 4.5s steps(26) 1s forwards;
+}
+
+.sub::after {
+    width: 0.125em;
+    background: black;
+    animation: 
+    typewriter 4.5s steps(26) 1s forwards,
+    blinking 650ms steps(2, start) infinite;
+}
+
+.subtitle {
+    visibility: hidden;
+}
+
+section {
+    max-width: 100vw;
+    height: min-content;
+}
+
+article {
+    height: 1000px;
+    padding: 20px; 
+    border: 2px solid red;
+    font-family: 'Source Code Pro', monospace;
+}
+
+@keyframes typewriter {
+    to { 
+        left: 100%; 
+    }
+}
+
+@keyframes blinking {
+    to { 
+        visibility: hidden;
+    }
+}
+
+@keyframes fade {
+    to { 
+        background: transparent;
+    }
 }

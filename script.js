@@ -3,14 +3,11 @@ let nav = document.getElementById('nav');
 let wrapper = document.getElementById('wrapper');
 let checkbox = document.getElementById('checkbox');
 let navWrapper = document.getElementById('nav');
+let myName = document.getElementById('my-name');
+let subtitle = document.getElementById('subtitle');
 
+// NAV BAR TRANSITIONS
 
-let viewportWidth = window.innerWidth;
-
-window.addEventListener('load', updateNavBar);
-window.addEventListener('resize', updateNavBar);
-
-// Nav Bar Opening and closing 
 menu.addEventListener('click', () => {
 
     wrapper.classList.toggle('open-nav');
@@ -18,14 +15,36 @@ menu.addEventListener('click', () => {
 
     wrapper.ontransitionend = () => {
         wrapper.style.zIndex = 2;
-        // console.log('Transition has ended');
     }
+    
     wrapper.style.zIndex = -2;
 
     }
 );
 
-function updateNavBar ()  {
-    // viewportWidth = window.innerWidth;
-};
+// ENDS NAV BAR
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        myName.classList.remove('name');
+        subtitle.style.visibility = 'visible';
+        subtitle.classList.add('sub');
+    }, 5000)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
