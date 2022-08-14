@@ -40,6 +40,9 @@ window.onscroll = function() {
     } else if (prevScroll < currentScroll && 
         wrapper.classList.contains('open-nav')) {
             wrapper.classList.remove('open-nav');
+            myName.classList.toggle('lower');
+            subtitle.classList.toggle('lower');
+
             // THIS CHANGES THE MENU ANIMATION
             checkbox.checked = false;
     } else {
