@@ -15,7 +15,7 @@ menu.addEventListener('click', () => {
     wrapper.style.zIndex = -2;
 
     let count = 0;
-    
+
     if (wrapper.classList.contains('open-nav')) {
         myName.classList.toggle('lower');
         count++;
@@ -25,16 +25,12 @@ menu.addEventListener('click', () => {
         setTimeout(() => {
             myName.classList.remove('lower');
         }, 500)
-        // myName.classList.remove('lower');
     }
 
 
     wrapper.ontransitionend = () => {
         wrapper.style.zIndex = 2;
-        // myName.classList.remove('lower');
     }
-    
-    // myName.classList.remove('lower');
     wrapper.style.zIndex = -2;
 
     }
@@ -51,6 +47,8 @@ window.addEventListener('load', () => {
         subtitle.classList.add('sub');
     }, 5000)
 })
+
+// 
 
 
 
