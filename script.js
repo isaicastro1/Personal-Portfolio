@@ -14,18 +14,8 @@ menu.addEventListener('click', () => {
     wrapper.classList.toggle('open-nav');
     wrapper.style.zIndex = -2;
 
-    let count = 0;
-
-    if (wrapper.classList.contains('open-nav')) {
-        myName.classList.toggle('lower');
-        count++;
-    };
-
-    if (count % 2 === 0) {
-        setTimeout(() => {
-            myName.classList.remove('lower');
-        }, 200)
-    }
+    myName.classList.toggle('lower');
+    subtitle.classList.toggle('lower');
 
 
     wrapper.ontransitionend = () => {

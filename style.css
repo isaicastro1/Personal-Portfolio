@@ -281,10 +281,10 @@ li:hover {
 .my-name,
 .subtitle {
     font-size: 5vw;
-
     color: #66FCF1;
     margin: 10px;
     position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -340,7 +340,7 @@ li:hover {
 }
 
 .lower {
-    margin-top: 150px;
+    transform: translateY(80px);
 }
 
 .subtitle {
@@ -383,3 +383,11 @@ article {
         background: transparent;
     }
 }
+
+
+
+
+
+
+
+
