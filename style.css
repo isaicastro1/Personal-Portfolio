@@ -7,7 +7,6 @@
 html {
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
 }
 
 /* Hide Scrollbar */
-.example::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
   }
 
@@ -93,10 +92,6 @@ li:hover {
     max-height: 60px;
     max-width: 80px;
     transition: 0.2s;
-}
-
-.logo:hover {
-    transform: scale(1.2);
 }
 
 #checkbox {

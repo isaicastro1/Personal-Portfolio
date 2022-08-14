@@ -24,7 +24,7 @@ menu.addEventListener('click', () => {
     if (count % 2 === 0) {
         setTimeout(() => {
             myName.classList.remove('lower');
-        }, 500)
+        }, 200)
     }
 
 
