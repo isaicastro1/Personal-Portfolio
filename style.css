@@ -41,6 +41,8 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     width: 100vw;
     margin: 0;
+    top: 0;
+    transition: top 0.5s;    
     background-color: var(--primary-color);
     z-index: 2;
     position: fixed;
@@ -270,8 +272,9 @@ li:hover {
 /* Body */
 
 .first-page {
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: 'Source Code Pro', monospace;

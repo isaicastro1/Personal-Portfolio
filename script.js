@@ -9,6 +9,7 @@ let firstPage = document.getElementById('first-page');
 
 // NAV BAR TRANSITIONS
 
+// OPENS NAV AND CHANGES Z-INDEX
 menu.addEventListener('click', () => {
 
     wrapper.classList.toggle('open-nav');
@@ -25,6 +26,29 @@ menu.addEventListener('click', () => {
 
     }
 );
+
+// HIDES NAVBAR AND CLOSES MENU WHEN SCROLLING 
+// DOWN AND SHOWS NAVBAR WHEN SCROLLING UP 
+let prevScroll = window.pageYOffset;
+
+window.onscroll = function() {
+
+    let currentScroll = window.pageYOffset;
+
+    if (prevScroll > currentScroll) {
+        nav.style.top = "0";
+    } else if (prevScroll < currentScroll && 
+        wrapper.classList.contains('open-nav')) {
+            wrapper.classList.remove('open-nav');
+            // THIS CHANGES THE MENU ANIMATION
+            checkbox.checked = false;
+    } else {
+        nav.style.top = "-60px";
+    }
+
+    prevScroll = currentScroll;
+}
+
 
 // ENDS NAV BAR
 
