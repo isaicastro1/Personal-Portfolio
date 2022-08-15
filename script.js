@@ -6,6 +6,9 @@ let navWrapper = document.getElementById('nav');
 let myName = document.getElementById('my-name');
 let subtitle = document.getElementById('subtitle');
 let firstPage = document.getElementById('first-page');
+let headers = document.getElementsByClassName('headers');
+
+console.log(headers);
 
 // NAV BAR TRANSITIONS
 
@@ -35,7 +38,7 @@ window.onscroll = function() {
 
     let currentScroll = window.pageYOffset;
 
-    if (prevScroll > currentScroll) {
+    if (prevScroll > currentScroll || window.pageYOffset === 0) {
         nav.style.top = "0";
     } else if (prevScroll < currentScroll && 
         wrapper.classList.contains('open-nav')) {
@@ -56,7 +59,6 @@ window.onscroll = function() {
 // ENDS NAV BAR
 
 // FRONT-PAGE TYPING ANIMATION
-
 window.addEventListener('load', () => {
     setTimeout(() => {
         myName.classList.remove('name');
@@ -65,8 +67,21 @@ window.addEventListener('load', () => {
     }, 5000)
 })
 
-// 
+// INTERSECTION OBSERVER
+let options = {
+    rootMargin: '0px',
+    threshold: 1
+  }
+  
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        console.log(entry.target)
+    })
+}, options);
 
+for (let head of headers) {
+    observer.observe(head)
+}
 
 
 
