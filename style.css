@@ -360,6 +360,42 @@ article {
   font-family: "Source Code Pro", monospace;
 }
 
+/* SKILLS */
+.all-skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skills {
+  max-width: auto;
+  max-height: 80px;
+  transition: 0.2s ease-in-out;
+}
+
+.skills:hover {
+  transform: scale(1.1);
+}
+
+/* ABOUT */
+.profile-img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50px;
+}
+
+.social {
+  display: flex;
+}
+
+.github:hover,
+.linkedin:hover {
+  transition: 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+
 @media (min-width: 1000px) {
   .my-name,
   .subtitle {
