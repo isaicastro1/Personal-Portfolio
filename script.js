@@ -1,18 +1,12 @@
-let menu = document.getElementById("checkbox");
-let nav = document.getElementById("nav");
-let wrapper = document.getElementById("wrapper");
-let checkbox = document.getElementById("checkbox");
-let navWrapper = document.getElementById("nav");
-let myName = document.getElementById("my-name");
-let subtitle = document.getElementById("subtitle");
-let firstPage = document.getElementById("first-page");
-let headers = document.getElementsByClassName("headers");
-
-console.log(headers);
-
 // NAV BAR TRANSITIONS
 
 // OPENS NAV AND CHANGES Z-INDEX
+
+let menu = document.getElementById("checkbox");
+let wrapper = document.getElementById("wrapper");
+let myName = document.getElementById("my-name");
+let subtitle = document.getElementById("subtitle");
+
 menu.addEventListener("click", () => {
   wrapper.classList.toggle("open-nav");
   wrapper.style.zIndex = -2;
@@ -32,6 +26,8 @@ let prevScroll = window.pageYOffset;
 
 window.onscroll = function () {
   let currentScroll = window.pageYOffset;
+  let nav = document.getElementById("nav");
+  let checkbox = document.getElementById("checkbox");
 
   if (prevScroll > currentScroll || window.pageYOffset === 0) {
     nav.style.top = "0";
@@ -64,17 +60,22 @@ window.addEventListener("load", () => {
 });
 
 // INTERSECTION OBSERVER
+
+let articles = document.querySelectorAll(".articles");
+
 let options = {
   rootMargin: "0px",
-  threshold: 1,
+  threshold: 0.25, //How much of the element is shown (default is zero)
 };
 
 let observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry.target);
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+    }
   });
 }, options);
 
-for (let head of headers) {
-  observer.observe(head);
-}
+articles.forEach((article) => {
+  observer.observe(article);
+});
