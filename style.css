@@ -408,7 +408,25 @@ li:hover {
   visibility: hidden;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 680px) {
+  .box::after {
+    content: "";
+    border-top: 300px solid var(--secondary-color);
+    border-right: 600px solid transparent;
+    width: 0;
+    position: absolute;
+  }
+
+  .my-name {
+    margin: 0;
+  }
+
+  .front-page-svg {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 681px) {
   .box::after {
     content: "";
     border-top: 400px solid var(--secondary-color);
