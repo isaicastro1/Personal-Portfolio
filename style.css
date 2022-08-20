@@ -13,11 +13,13 @@ html {
   padding: 0px;
   overflow-x: hidden;
   min-height: fit-content;
+  max-width: 100vw;
 }
 
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 /* Hide Scrollbar */
@@ -113,6 +115,7 @@ li:hover {
   display: inline-block;
   position: relative;
   color: var(--secondary-color);
+  min-width: max-content;
 }
 
 .nav-a:hover {
@@ -361,10 +364,10 @@ li:hover {
 }
 
 .front-page-svg {
-  height: 25vh;
-  width: 25vw;
-  min-height: 100px;
-  min-width: 200px;
+  height: 20vh;
+  width: 20vw;
+  min-height: 80px;
+  min-width: 100px;
   max-height: 200px;
   max-width: 300px;
   margin-bottom: 50px;
@@ -426,7 +429,7 @@ li:hover {
 }
 
 .lower {
-  transform: translateY(30px);
+  transform: translateY(50px);
 }
 
 .subtitle {
@@ -491,7 +494,6 @@ section {
 
 article {
   height: 1000px;
-  /* border: 2px solid red; */
   font-family: "Playfair Display", serif;
 }
 
@@ -616,6 +618,7 @@ section {
   width: max-content;
   font-size: 2.5rem;
   font-weight: 700;
+  margin: 0;
   border-bottom: 5px solid black;
 }
 
@@ -638,8 +641,14 @@ section {
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 80%;
-  gap: 30px;
+  gap: 10px;
+  max-height: 200px;
+}
+
+.container p {
+  font-size: 2vw;
 }
 
 .project-1 .container p,
@@ -649,12 +658,21 @@ section {
 }
 
 .project-img {
+  width: 10vh;
+  height: auto;
+  min-height: 80px;
   max-width: 150px;
-  max-height: auto;
+  max-height: 150px;
 }
 
 .project * {
   border: 2px solid red;
+}
+
+@media (min-width: 900px) {
+  .container p {
+    font-size: 17px;
+  }
 }
 
 /* Projects End */
