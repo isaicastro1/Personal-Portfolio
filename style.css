@@ -573,9 +573,9 @@ section {
   transform: translateY(-7px);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .prof-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -681,6 +681,12 @@ section {
   }
 }
 
+@media (max-width: 500px) {
+  .container p {
+    font-size: 10px;
+  }
+}
+
 /* Projects End */
 
 /* SKILLS */
@@ -716,7 +722,7 @@ section {
 
 .skills {
   max-width: auto;
-  max-height: 80px;
+  max-height: 7vh;
   transition: 0.2s ease-in-out;
 }
 
@@ -738,6 +744,12 @@ section {
 .linkedin:hover {
   transition: 0.1s ease-in-out;
   transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  .skills {
+    max-height: 5vh;
+  }
 }
 /* Contact End */
 
