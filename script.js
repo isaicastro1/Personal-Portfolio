@@ -60,7 +60,6 @@ window.addEventListener("load", () => {
 });
 
 // INTERSECTION OBSERVER
-
 let articles = document.querySelectorAll(".articles");
 
 let options = {

@@ -446,8 +446,8 @@ li:hover {
 @media (max-width: 680px) {
   .box::after {
     content: "";
-    border-top: 300px solid var(--secondary-color);
-    border-right: 580px solid transparent;
+    border-top: 50vh solid var(--secondary-color);
+    border-right: 100vw solid transparent;
     width: 0;
     position: absolute;
   }
