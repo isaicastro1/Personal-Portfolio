@@ -21,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  /* overflow-x: hidden; */
 }
 
 /* Hide Scrollbar */
@@ -40,9 +39,6 @@ body::-webkit-scrollbar {
   width: 100vw;
   max-width: 1500px;
   min-height: max-content;
-}
-
-section {
 }
 
 * {
