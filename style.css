@@ -516,7 +516,6 @@ article {
 
 .my-skills {
   font-size: 1.3rem;
-  /* text-decoration: wavy; */
 }
 
 .section-container {
@@ -596,7 +595,7 @@ article {
 
   .profile-img {
     padding: 0;
-    height: auto;
+    height: 200px;
   }
 
   .resume-btn {
@@ -671,22 +670,38 @@ article {
 }
 
 .project-img {
-  width: 10vh;
+  width: 20vh;
   height: auto;
   min-height: 80px;
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 320px;
+  max-height: 220px;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 350px) {
   .container p {
-    font-size: 17px;
+    display: none;
+  }
+
+  .project-img {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 500px) {
+  .project-img {
+    width: 40vw;
   }
 }
 
 @media (max-width: 500px) {
   .container p {
     font-size: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container p {
+    font-size: 17px;
   }
 }
 

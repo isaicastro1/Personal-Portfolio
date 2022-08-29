@@ -53,33 +53,6 @@ window.onscroll = function () {
 
   prevScroll = currentScroll;
 };
-
-// const about = document.getElementById("about-nav");
-// const about2 = document.getElementById("about-nav2");
-// const projects = document.getElementById("projects-nav");
-// const projects2 = document.getElementById("projects-nav2");
-// const skills = document.getElementById("skills-nav");
-// const skills2 = document.getElementById("skills-nav2");
-// const contact = document.getElementById("contact-nav");
-// const contact2 = document.getElementById("contact-nav2");
-
-// const navButtons = [
-//   about,
-//   about2,
-//   projects,
-//   projects2,
-//   skills,
-//   skills2,
-//   contact,
-//   contact2,
-// ];
-
-// navButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     button.scrollIntoView();
-//   });
-// });
-
 // ENDS NAV BAR
 
 // FRONT-PAGE TYPING ANIMATION
