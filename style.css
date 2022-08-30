@@ -333,7 +333,7 @@ li:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   font-family: "Source Code Pro", monospace;
   background: var(--primary-color);
@@ -514,10 +514,6 @@ article {
   border-bottom: 5px solid black;
 }
 
-.my-skills {
-  font-size: 1.3rem;
-}
-
 .section-container {
   display: flex;
   justify-content: center;
@@ -577,10 +573,6 @@ article {
     font-size: 14px;
   }
 
-  .my-skills {
-    font-size: 1rem;
-  }
-
   .resume-btn {
     height: 60px;
     width: 15vw;
@@ -603,9 +595,9 @@ article {
   }
 }
 
-@media (min-width: 750px) {
-  .resume-btn {
-    margin-top: 40px;
+@media (max-width: 750px) {
+  .prof-text {
+    font-size: 14px;
   }
 }
 /* About End */
@@ -623,6 +615,7 @@ article {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  margin-top: 50px;
 }
 
 .proj-title {
@@ -657,6 +650,7 @@ article {
   width: 80%;
   gap: 10px;
   max-height: 200px;
+  padding: 15px;
 }
 
 .container p {
@@ -669,8 +663,12 @@ article {
   width: 60%;
 }
 
+.headers {
+  text-align: center;
+}
+
 .project-img {
-  width: 20vh;
+  width: 25vh;
   height: auto;
   min-height: 80px;
   max-width: 320px;
@@ -706,48 +704,6 @@ article {
 }
 
 /* Projects End */
-
-/* SKILLS */
-.skills-section {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  padding: 20px;
-  max-height: 600px;
-}
-
-.all-skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  height: 100%;
-  /* border: 1px solid red; */
-}
-
-.skills-title {
-  text-align: center;
-  width: max-content;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 10px;
-  border-bottom: 5px solid black;
-}
-
-.skills {
-  max-width: auto;
-  max-height: 7vh;
-  transition: 0.2s ease-in-out;
-}
-
-.skills:hover {
-  transform: scale(1.1);
-}
-/* Skills End */
 
 /* Contact */
 .contact-sec {
