@@ -79,7 +79,7 @@ label {
 .refs {
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 50px;
   width: 100%;
   margin-right: 10vw;
   align-items: center;
@@ -614,9 +614,10 @@ article {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   margin-top: 50px;
+  /* border: 1px solid red; */
 }
 
 .proj-title {
@@ -640,7 +641,7 @@ article {
 .project-1,
 .project-2,
 .project-3 {
-  height: 400px;
+  height: 500px;
   width: 100%;
 }
 
@@ -676,6 +677,42 @@ article {
   max-height: 220px;
 }
 
+.project-link {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.live,
+.code {
+  height: 60px;
+  width: 23vw;
+  max-width: 160px;
+  min-width: 140px;
+  border-radius: 45px;
+  letter-spacing: 2px;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  font-family: "Roboto";
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  margin: 10px 0 20px 0;
+  padding: 5px;
+}
+
+.live:hover,
+.code:hover {
+  cursor: pointer;
+  opacity: 0.95;
+  box-shadow: 0px 15px 20px rgb(109, 175, 254, 0.7);
+  transform: translateY(-7px);
+}
+
 @media (max-width: 450px) {
   .container p {
     display: none;
@@ -683,6 +720,24 @@ article {
 
   .project-img {
     width: 80vw;
+  }
+
+  .project-link {
+    width: 250px;
+  }
+
+  .live,
+  .code {
+    min-width: 100px;
+    min-height: 40px;
+    width: 15vw;
+  }
+}
+
+@media (min-width: 451px) {
+  .live,
+  .code {
+    letter-spacing: 10px;
   }
 }
 
@@ -694,13 +749,19 @@ article {
 
 @media (max-width: 500px) {
   .container p {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
 @media (min-width: 900px) {
   .container p {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 700px) {
+  .container p {
+    font-size: 14px;
   }
 }
 
@@ -721,7 +782,7 @@ article {
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 850px;
   max-height: 1000px;
   gap: 30px;
 }
