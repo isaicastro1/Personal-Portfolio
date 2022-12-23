@@ -1,3 +1,4 @@
 # Practice-Project
 
-Practicing portfolio website from scratch including animations and responsiveness!
+Personal portfolio website from scratch including animations and responsiveness!
+Includes list of all projects from small ideas, to large scale e-commerce apps!
